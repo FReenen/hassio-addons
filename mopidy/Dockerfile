@@ -42,27 +42,27 @@ RUN \
         gstreamer1.0-pulseaudio \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
-    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
-    \
-    && apt-get purge -y --auto-remove \
-        dirmngr \
-        gpg-agent \
-        gpg \
-        git \
-        libffi-dev \
-        libxml2-dev \
-        libxslt1-dev \
-        zlib1g-dev \
-        build-essential \
-        gcc \
-        python-dev \
-        dpkg-dev \
-        gcc-7 \
-    && rm -fr \
-        /var/{cache,log}/* \
-        /var/lib/apt/lists/* \
-        /root/.cache \
-    && find /tmp/ -mindepth 1  -delete
+    && pip3 install --no-cache-dir -r /tmp/requirements.txt
+
+#    && apt-get purge -y --auto-remove \
+#        dirmngr \
+#        gpg-agent \
+#        gpg \
+#        git \
+#        libffi-dev \
+#        libxml2-dev \
+#        libxslt1-dev \
+#        zlib1g-dev \
+#        build-essential \
+#        gcc \
+#        python-dev \
+#        dpkg-dev \
+#        gcc-7 \
+#    && rm -fr \
+#        /var/{cache,log}/* \
+#        /var/lib/apt/lists/* \
+#        /root/.cache \
+#    && find /tmp/ -mindepth 1  -delete
 
 # Move access.log to stdout and error.log to stderr
 RUN mkdir -p /var/log/nginx && ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
