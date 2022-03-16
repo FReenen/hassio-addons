@@ -10,6 +10,7 @@ ingress_entry: iris/
 ingress_stream: true
 arch:
   - amd64
+  - aarch64
 auth_api: true
 audio: true
 ports:
