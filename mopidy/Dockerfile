@@ -30,8 +30,6 @@ RUN \
         libxml2-dev \
         libxslt1-dev \
         libasound2-dev \
-        libspotify12 \
-        libspotify-dev \
         zlib1g-dev \
         build-essential \
         python3-dev \
