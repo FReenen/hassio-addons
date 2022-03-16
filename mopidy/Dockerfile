@@ -44,11 +44,6 @@ RUN \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
-    && find /usr/local/lib/python3.7/ -type d -name tests -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -type d -name test -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name __pycache__ -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name "*.pyc" -depth -exec rm -f {} \; \
-    \
     && apt-get purge -y --auto-remove \
         dirmngr \
         gpg-agent \
