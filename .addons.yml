@@ -1,0 +1,8 @@
+
+---
+channel: stable
+addons:
+  mopidy:
+    repository: hassio-addons/addon-mopidy
+    target: mopidy
+    image: mopidy/images/screenshot.png
