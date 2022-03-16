@@ -19,6 +19,7 @@ RUN \
         nginx \
         git \
     \
+    && mkdir -p /usr/local/share/keyrings \
     && curl -L https://apt.mopidy.com/mopidy.gpg -o /usr/local/share/keyrings/mopidy-archive-keyring.gpg \
     && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
     \
